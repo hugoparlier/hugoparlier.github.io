@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hugo Parlier</title>
+    <style>
+        /* Reset default margin and padding */
+        body, h1, h2, h3, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* General styling */
+        body {
+            font-family: 'HelveticaNeue-Light', Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            color: #333;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        /* Container */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-top: 50px;
+        }
+
+        /* Header */
+        h1 {
+            font-size: 36px;
+            font-weight: lighter; /* Thinner font weight */
+            color: #34282C;
+            margin-bottom: 20px;
+        }
+
+        /* Menu */
+        nav {
+            background-color: #34282C;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* Content */
+        p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #666;
+        }
+
+        /* Image */
+        .profile-img {
+            display: block;
+            margin: 0 auto;
+            width: 100%; /* Adjusted to maintain original size */
+            max-width: 400px; /* Adjust the maximum width as needed */
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        /* Links in text */
+        a {
+    text-decoration: none;
+    color: #34282C; /* Adjusted link color */
+}
+
+/* Change link color on hover */
+a:hover {
+    color: #FF007F; /* Change this to the color you want on hover */
+}
+        /* Thinner font for section titles */
+       h2 {
+            font-weight: lighter;
+            padding-bottom: 5px;
+        }
+        h3 {
+            font-weight: lighter;
+            padding-bottom: 10px;
+            padding-top: 5px;
+        }
+        #changingPhoto {
+            display: block;
+            margin: 0 auto;
+%            width: 100%; /* Adjusted to maintain original size */
+            max-height: 250px; /* Adjust the maximum width as needed */
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 20px;
+ %          display: none;
+        }
+        #placeholder {
+        display: block;
+        margin: 0 auto;
+            %max-width: 100%; /* Adjust as needed */
+            max-height: 250px; /* Adjust as needed */
+            border-radius: 5px;
+            margin-bottom: 20px;
+            }
+            
+            .media {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden; /* Clear float */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Reaching out</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="outreach.html">Outreach</a></li>
+            <li><a href="teaching.html">Teaching</a></li>
+        </ul>
+    </nav>
+    
+       
+    <img id="changingPhoto" src="PhotoGO1.jpg" alt="Changing Photo">
+
+    <script>
+        // Array of photo URLs
+        var photoUrls = [
+        "PhotoGO1.jpg",
+         "PhotoDubai4.jpg",
+         "PhotoSF2021.jpg",
+         "PhotoDubai5.jpg",
+         "PhotoGO2.jpg",
+         "PhotoDubai2.jpg",
+         "PhotoSF2017.jpg",
+         "PhotoDubai6.jpg",
+          "PhotoDubai3.jpg",
+          "PhotoFeelMath.jpeg",
+           "PhotoDubai7.jpg"
+            // Add more photo URLs as needed
+        ];
+
+        var currentIndex = 0; // Index of the current photo
+
+    function changePhoto() {
+        // Update the src attribute of the image
+        document.getElementById("changingPhoto").src = photoUrls[currentIndex];
+
+        // Increment index or reset to 0 if reached the end
+        currentIndex = (currentIndex + 1) % photoUrls.length;
+    }
+
+        // Change photo every 5 seconds (5000 milliseconds)
+        setInterval(changePhoto, 5000);
+    </script>
+
+<p>Reaching out, communicating and sharing what it is we do to non-specialists, is vital, important and rewarding. I spend a lot of time working on outreach projects of different types, including creating exhibits for science festivals, games, and exploring the relationship between creativity and mathematics. This greatly influences how I share math, including in more traditional formats like in seminars or classes. My main collaborators are Bruno Teheux (University of Luxembourg), Paul Turner (University of Geneva), Ann Kiefer (University of Luxembourg), Mario Guttiérez and Reyna Juárez. There are too many past events to list here, but we've truly been around the world with these projects.</p>
+
+<p>
+We showcase mathematical games in <A HREF=https://www.science-festival.lu/en/>science festivals</A> and at general public venues including the <A HREF=https://math.uni.lu/outreach/dubai/>Universal Expo</A> and the <A HREF=https://www.uni.lu/fstm-en/news/playing-the-game-of-math/>Game On</A> festival. Many ideas originated in the <A HREF=https://www.unige.ch/~turnerpa/Mathema.html>Mathema</A> project created together with Paul Turner. 
+</p>
+
+<p>
+Bruno Teheux and I launched the <A HREF=https://math.uni.lu/outreach/gem/>Girls Exploring Math initiative</A> which we co-organize together with Ann Kiefer.
+</p>
+
+<p>
+Together with Bruno Teheux, we created the ReShape project (part of Sound of Data for Esch 2022). We collected over 20000 drawings and gave them to three musicians who composed music based on them: <a href="https://www.youtube.com/watch?v=KgzM6lkjmJc">Music by Hester 1</a>, <a href="https://www.youtube.com/watch?v=n9l_oTHr-_w">Music by Mike von der Nahmer</a> and <a href="https://www.youtube.com/watch?v=hctZ4CAA-Ks">Music by Timelord</a>.<br>
+
+</p>
+
+
+
+<h3>Games</h3>
+
+<div class="media">
+<div>
+<A HREF=http://quadratis.app>Quadratis</A> is a joy packed exploration game created together with Paul Turner and Mario Guttiérez. Download it (available on the App Store and on Google Play).
+</div>                
+</div>
+
+<div class="media">
+<div> Exploratis, based on Quadratis, allows visitors to visualize their game strategies and compete against each other. It has been installed at the Science Center in Differdange and is soon to be inaugurated at the <A HREF=https://scienscope.unige.ch>Sciencescope</A> at the University of Geneva.
+</div>                
+</div>
+
+<div class="media">
+<div>
+ With Bruno Teheux, we created the games <A HREF=https://involution-games.com>Involution</A>, Revolution and Cyclicity. 
+</div>                
+</div>
+
+<h3>Media presence</h3>
+
+<div class="media">
+<div><A HREF="InterviewDubai.mov"i>Live interview</A>, during the World Expo on Expo TV/Dubai One.</div>                
+</div>
+
+<div class="media">
+<div><A HREF=https://journal.lu/de/main-element-hugo-parlieri>Main Element - Podcast</A>, where I was invited for an episode (there is also a <A HREF=https://open.spotify.com/episode/05ndc6EgUU4G1xeDkRTn2i>Spotify link</A>)</div>                
+</div>
+
+<div class="media">
+<div><A HREF=https://youtu.be/Sj1izCFskYU>A short video</A>, made with Bruno Teheux to celebrate the GEM initiative.</div>                
+</div>
+
+<div class="media">
+<div><A HREF=https://www.fnr.lu/research-with-impact-fnr-highlight/hugo-parlier/>An article by the FNR</A> about ReCreate at the Universal Expo.</div>                
+</div>
+
+<div class="media">
+<div><A HREF=https://www.youtube.com/watch?v=9pMqpjJrQJM>A short video about DMATH (uni.lu)</A>, made with Bruno Teheux. There is also a <A HREF=https://www.youtube.com/watch?v=luKqXqErqUU>longer version</A>.</div>                
+</div>
+
+<div class="media">
+<div><A HREF=https://www.youtube.com/watch?v=uHTJcQdHHRo>Science in colors</A>,  a video about being a mentor produced by the <A HREF=http://fnr.lu>FNR</A>.</div>
+</div>
+
+<div class="media">
+<div><A HREF=https://lequotidien.lu/luxembourg/nouvelle-station-et-animations-ce-samedi-au-science-center/>Article in le Quotidien</A>, about the Exploratis station at the Science Center.</div>
+</div>
+
+<div class="media">
+<div><A HREF=https://www.24heures.ch/deux-chercheurs-veulent-faire-decouvrir-la-beaute-des-maths-256318748039>24 heures article</A>, about Mathema (co-created with Paul Turner).</div>
+</div>
+
+
+<div class="media">
+<div><A HREF=https://www.youtube.com/watch?v=RBjk2mqaSts>Mathema demo video</A>.</div>
+</div>           
+                        
+<p>Outreach is done by teams of dedicated people. Thanks to all friends and colleagues who helped us over the years and to the FNR and to SNF for funding!
+</p>
+<footer>
+        &copy; 2024 Hugo Parlier
+    </footer>
+</div>
+
+</body>
+</html>

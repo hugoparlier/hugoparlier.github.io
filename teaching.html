@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hugo Parlier</title>
+    <style>
+        /* Reset default margin and padding */
+        body, h1, h2, h3, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* General styling */
+        body {
+            font-family: 'HelveticaNeue-Light', Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            color: #333;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Container */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-top: 50px;
+        }
+
+        /* Header */
+        h1 {
+            font-size: 36px;
+            font-weight: lighter; /* Thinner font weight */
+            color: #34282C;
+            margin-bottom: 20px;
+        }
+
+        /* Menu */
+        nav {
+            background-color: #34282C;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* Content */
+        p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #666;
+        }
+
+        /* Image */
+        .profile-img {
+            display: block;
+            margin: 0 auto;
+            width: 100%; /* Adjusted to maintain original size */
+            max-width: 400px; /* Adjust the maximum width as needed */
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        /* Links in text */
+a {
+    text-decoration: none;
+    color: #34282C; /* Adjusted link color */
+}
+
+/* Change link color on hover */
+a:hover {
+    color: #FF007F; /* Change this to the color you want on hover */
+}
+
+        /* Thinner font for section titles */
+       h2 {
+            font-weight: lighter;
+            padding-bottom: 5px;
+        }
+        h3 {
+            font-weight: lighter;
+            padding-bottom: 10px;
+            padding-top: 5px;
+        }
+        #changingPhoto {
+            display: block;
+            margin: 0 auto;
+%            width: 100%; /* Adjusted to maintain original size */
+            max-height: 250px; /* Adjust the maximum width as needed */
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 20px;
+ %          display: none;
+        }
+        #placeholder {
+        display: block;
+        margin: 0 auto;
+            %max-width: 100%; /* Adjust as needed */
+            max-height: 250px; /* Adjust as needed */
+            border-radius: 5px;
+            margin-bottom: 20px;
+            }
+            
+            .media {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden; /* Clear float */
+        }
+        
+        /* Add spacing between lines */
+    .course-item {
+        margin-bottom: 10px;
+    }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Teaching</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="outreach.html">Outreach</a></li>
+            <li><a href="teaching.html">Teaching</a></li>
+        </ul>
+    </nav>
+    
+       
+    
+<h3>Currently teaching</h3>
+<div class="course-item">
+    Autumn 2022-?: Analysis 1<br>
+    Autumn 2019-?: Combinatorial geometry<br>
+    Spring 2024-?: Euclidean and Non-Euclidean geometry (aka Geometry...)<br>
+    Co-creator and co-coordinator of Math Forge, a mathematics clinic for the students of the University of Luxembourg<br>
+</div>
+
+<h3>Previous courses</h3>
+<div class="course-item">
+    Autumn 2018: Basics of Discrete Math<br>
+    Autumn 2017-2022: Analyse 1<br>
+    Spring 2017-2023: Courbes et surfaces<br>
+    Autumn 2015: Géométrie Combinatoire (Fribourg)<br>
+    Spring 2015: Calculus on manifolds (CUNY)<br>
+    Spring 2011, 2014: Géométrie des surfaces/Geometry of surfaces (Fribourg)<br>
+    Autumn 2012: Géométrie Combinatoire (Fribourg)<br>
+    Spring 2012: Algèbre Linéaire II (Fribourg)<br>
+</div>
+
+<h3>Mini-Courses (research level)</h3>
+<div class="course-item">
+    July 2019: Ideal polygons and moduli spaces, Chiang Mai University, Thailand.<br>
+    August 2018: <a href="https://math.cuso.ch/index.php?id=2607&L=0&tx_displaycontroller[showUid]=3825"><i>Geometry and dynamics on hyperbolic surfaces</i></a>, Swiss Doctoral School Conference (CUSO), Diablerets, Switzerland.<br>
+    June 2017: <a href="http://www-irma.u-strasbg.fr/article1606.html"><i>Master Class : Contemporary Perspectives in Geometry</i></a>, University of Strasbourg.<br>
+    September 2015: The geometry of curves and arcs on surfaces, University of Cagliari<br>
+    June 2014: Combinatorial aspects of Teichmuller spaces, IRMA Strasbourg<br>
+    March 2013: The geometry of surfaces and their deformation spaces, ESI Vienna<br>
+</div>
+
+<h3>Master project supervision</h3>
+<div class="course-item">
+    Luxembourg: Thomas Cusumano, Yannick Huss (2020), Charlene Roncalli (2021), Joao Gil Rocha Figueiredo, Clara Popescu (2023)<br>
+    Fribourg: Delphine Milenovic (2014), Anna Ferretti (2016), Samuel Zappa (2016)<br>
+</div>
+
+
+<footer>
+        &copy; 2024 Hugo Parlier
+    </footer>
+</div>
+
+</body>
+</html>

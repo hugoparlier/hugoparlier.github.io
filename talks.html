@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hugo Parlier</title>
+    <style>
+        /* Reset default margin and padding */
+        body, h1, h2, h3, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* General styling */
+        body {
+            font-family: 'HelveticaNeue-Light', Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            color: #333;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Container */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-top: 50px;
+        }
+
+        /* Header */
+        h1 {
+            font-size: 36px;
+            font-weight: lighter; /* Thinner font weight */
+            color: #34282C;
+            margin-bottom: 20px;
+        }
+
+        /* Menu */
+        nav {
+            background-color: #34282C;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* Content */
+        p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #666;
+        }
+
+        /* Image */
+        .profile-img {
+            display: block;
+            margin: 0 auto;
+            width: 100%; /* Adjusted to maintain original size */
+            max-width: 400px; /* Adjust the maximum width as needed */
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        /* Links in text */
+        a {
+            color: #34282C; /* Adjusted link color */
+            text-decoration: none;
+        }
+
+        /* Thinner font for section titles */
+        h2 {
+            font-weight: lighter;
+            padding-bottom: 5px;
+        }
+        h3 {
+            font-weight: lighter;
+            padding-bottom: 5px;
+            padding-top: 5px;
+        }
+        #cssmenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Add this line to make the list items display horizontally */
+}
+
+#cssmenu ul li {
+    display: inline; /* Keep the list items displayed inline */
+    margin-right: 20px;
+}
+
+/* Second Menu */
+#cssmenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #f2f2f2; /* Light grey background */
+    text-align: center; /* Center the menu items */
+    border-radius: 5px; /* Add border radius */
+}
+
+#cssmenu ul li {
+    display: inline-block;
+}
+
+#cssmenu ul li a {
+    display: block;
+    padding: 10px 10px; /* Adjust padding as needed */
+    text-decoration: none;
+    color: #000; /* Black text */
+}
+
+#cssmenu ul li:hover {
+    background-color: #ddd; /* Adjust hover background color as needed */
+}
+
+@media only screen and (max-width: 600px) {
+    #cssmenu ul li {
+        display: block;
+        margin-bottom: 10px; /* Add margin between items */
+    }
+}
+
+
+.grant {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden; /* Clear float */
+}
+.grant .title {
+    font-size: ; 
+    font-weight: italic;
+    padding: 1px; /* Make authors' names smaller */
+%    font-weight: bold; /* Make authors' names bold */
+}
+
+.grant .authors {
+margin-top: 2px;
+    font-size: small; /* Make authors' names smaller */
+%    font-weight: bold; /* Make authors' names bold */
+}
+
+.grant .venue {
+    font-size: small; /* Make journal names smaller */
+%    font-weight: bold; /* Make journal names bold */
+}
+
+.grant .details {
+    font-size: small; /* Make details names smaller */
+%    font-weight: bold; /* Make details names bold */
+}
+
+.grant dd {
+    margin-left: 0;
+    margin-top: 5px;
+}
+
+.grant dd:first-child {
+    margin-top: 10px;
+}
+
+.talk-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.talk-list li {
+    margin-bottom: 10px;
+}
+
+.talk-list li a {
+    text-decoration: none;
+    color: #333; /* Change color as needed */
+}
+
+.talk-list li a:hover {
+    color: #FF007F /* Change color as needed */
+}
+    
+.video-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.video-list li {
+    margin-bottom: 10px;
+}
+
+.video-list li a {
+    text-decoration: none;
+    color: #333; /* Change color as needed */
+}
+
+.video-list li a:hover {
+    color: #FF007F; /* Change color as needed */
+}
+
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Research</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="outreach.html">Outreach</a></li>
+            <li><a href="teaching.html">Teaching</a></li>
+        </ul>
+    </nav>
+
+<div id="cssmenu">
+    <ul>
+        <li><a href="research.html"><span>Collaborators</span></a></li>
+        <li><a href="publications.html"><span>Papers</span></a></li>
+        <li><a href="talks.html"><span>Talks</span></a></li>
+        <li><a href="grants.html"><span>Grants</span></a></li>
+        <li><a href="service.html"><span>Service</span></a></li>
+    </ul>
+</div>
+
+<br>
+
+<p>
+Some of my talks have been recorded and are available online. The list of talks only goes back to 2016.
+
+<h3>Videos Available Online</h3>
+<ul class="video-list">
+<li>
+        <a href="https://www.youtube.com/watch?v=bL2zfD-15CU">Simplement complexe</a> - Rejouissances ULiège (Pi Day), 2024.
+    </li>
+    <li>
+        <a href="https://www.youtube.com/watch?v=33eI3V4Oc9M">The simplicity of complexity</a> - Math Encounters talk at MoMATH, 2023.
+    </li>
+    <li>
+        <a href="https://www.college-de-france.fr/fr/agenda/seminaire/spectres-en-geometrie-hyperbolique/curves-surfaces-and-intersection">Curves, surfaces and intersection</a> - Collège de France, 2023.
+    </li>
+    <li>
+        <a href="https://www.youtube.com/watch?v=Fbz0axN5ppE">Crossing the line</a> - CIRM, 2023.
+    </li>
+
+    <li>
+        <a href="https://www.youtube.com/watch?v=LnG3rvbUqaw">Quantifying isospectral finiteness</a> - Dodziuk Fest (CUNY Graduate Center), 2018.
+    </li>
+
+        
+      
+    <li>
+        <a href="https://www.youtube.com/watch?v=3BydmOPrw40">From puzzles to moduli spaces</a> - IMS Public Lecture (Singapore), 2016.
+    </li>
+    <li>
+        <a href="https://www.youtube.com/watch?v=S-vZnuiNYjY">Combinatorial moduli spaces</a> - IMPA, 2015.
+    </li>
+
+    <!-- Add more video entries as needed -->
+</ul>
+
+
+
+</p>
+
+<h3>Conference talks</h3>
+
+<ul class="talk-list">
+<li>
+        <strong>November 2024:</strong> <a href=" ">Journ&eacute;es de g&eacute;om&eacute;trie</a>, Paris XIII, France.
+    </li>
+
+<li>
+        <strong>May 2024:</strong> <a href="https://www.discretization.de/events/103/">Discrete Differential Geometry and Dimers</a>, Berlin, Germany.
+    </li>
+
+    <li>
+        <strong>December 2023:</strong> <a href="https://www.math.kit.edu/iag3/~herrlich/seite/weihnachts-workshops/">Weihnachtsworkshop on Geometry and Number Theory</a>, Karlsruhe, Germany.
+    </li>
+    <li>
+        <strong>December 2023:</strong> <a href="https://conferences.cirm-math.fr/">Renormalization and Visualization in Geometry, Dynamics and number theory</a>, CIRM, France.
+    </li>
+    <li>
+        <strong>October 2023:</strong> <a href="https://conferences.cirm-math.fr/2897.html">Probability and Geometry in, on and of non-Euclidean spaces</a>, CIRM, France.
+    </li>
+    <li>
+        <strong>July 2023:</strong> <a href="https://sites.google.com/view/cms-nara2020/home">Characters and Moduli of Surfaces</a>, Nara, Japan.
+    </li>
+    <li>
+        <strong>June 2023:</strong> <a href="https://banyuls2023.sciencesconf.org/?forward-action=index&forward-controller=index&lang=en">Interactions between geometry and topology</a>, in honor of Ivan Babenko, Banyuls, France.
+    </li>
+    <li>
+        <strong>May 2023:</strong> <a href="https://matematicas.uam.es/~ernesto.girondo/GRS_Madrid2023/grs_Madrid2023.html">Geometry of Riemann Surfaces</a>, Madrid, Spain.
+    </li>
+    <li>
+        <strong>May 2023:</strong> <a href="https://www.bristol.ac.uk/maths/events/2023/two-day-geometry-meeting.html">Geometry Meeting</a>, Bristol, UK.
+    </li>
+    <li>
+        <strong>October 2022:</strong> <a href="https://indico.cern.ch/event/1038038/">Let's talk about outreach!</a>, SwissMAP Research Station, Diablerets, Switzerland.
+    </li>
+    <li>
+        <strong>August 2022:</strong> Bridges 2022, Aalto University, Helsinki, Finland.
+    </li>
+    <li>
+        <strong>July 2022:</strong> AMS-EMS-SMF Meeting, Grenoble, France.
+    </li>
+    <li>
+        <strong>July 2022:</strong> Geometry Days, Nancy, France.
+    </li>
+    <li>
+        <strong>June 2022:</strong> <a href="https://sites.northwestern.edu/nemmers/">Laplacians on random hyperbolic surfaces and on random graphs</a>, in honor of Nemmers Prize recipient Nalini Anantharaman, Northwestern University, USA.
+    </li>
+    <li>
+        <strong>January 2022:</strong> Computation and Reconfiguration in Low-Dimensional Topological Spaces, Dagstuhl seminar, Germany.
+    </li>
+    <li>
+        <strong>September 2021:</strong> <a href="https://indico.in2p3.fr/event/24704/">Journ. CombiTop@Lyon</a>, ENS Lyon, France.
+    </li>
+    <li>
+        <strong>August 2021 (online):</strong> <a href="http://dopal.cs.uec.ac.jp/okamotoy/misc/2021/crdcg.html">Combinatorial Reconfiguration in Discrete and Computational Geometry</a>, Tokyo, Japan.
+    </li>
+    <li>
+        <strong>July 2021:</strong> <a href="https://homeweb.unifr.ch/liechtli/pub/swissknots21/">Swiss Knots 2021</a>, Fribourg, Switzerland.
+    </li>
+    <li>
+        <strong>June 2021 (online):</strong> <a href="https://sites.google.com/view/yrm-2021/home">Young researchers in Mathematics</a>, University of Bristol.
+    </li>
+    <li>
+        <strong>May 2021 (online):</strong> <a href="https://sites.google.com/view/gdghs-rims/home">Geometry of discrete groups and hyperbolic spaces</a>, with the support of RIMS, Japan.
+    </li>
+    <li>
+        <strong>May 2021 (online):</strong> <a href="#">Special session (AMS sectional meeting): Geodesics in Hyperbolic 2- and 3-manifolds</a>, San Francisco State.
+    </li>
+    <li>
+        <strong>March 2021 (online):</strong> <a href="#">Special session (AMS sectional meeting): Groups, Geometry, and Topology</a>, Georgia Tech.
+    </li>
+    <li>
+        <strong>March 2020:</strong> <a href="https://conferences.cirm-math.fr/2164.html">French Computational Geometry Days</a>, CIRM.
+    </li>
+    <li>
+        <strong>September 2019:</strong> <a href="https://icerm.brown.edu/programs/sp-f19/w1/">Illustrating Geometry and Topology</a>, ICERM, Brown University.
+    </li>
+    <li>
+        <strong>January 2019:</strong> <a href="http://math.uni.lu/geometry/nice2019/index.html">Geometric structures in Nice</a>, Université de Nice.
+    </li>
+    <li>
+        <strong>September 2018:</strong> <a href="https://bssm.ulb.ac.be/en/program.html">Brussels Summer School of Mathematics</a>, Université Libre de Bruxelles.
+    </li>
+    <li>
+        <strong>August 2018:</strong> <a href="https://math.cuso.ch/index.php?id=2607&L=0&tx_displaycontroller[showUid]=3825">Geometry and dynamics on hyperbolic surfaces</a>, Swiss Doctoral School Conference (CUSO), Diablerets, Switzerland.
+    </li>
+    <li>
+        <strong>July 2018:</strong> <a href="http://www2.warwick.ac.uk/fac/sci/maths/research/events/2017-18/symposium/gscc/">Graphs, surfaces, and cube complexes</a>, University of Warwick.
+    </li>
+    <li>
+        <strong>June 2018:</strong> <a href="http://geomschool2018.univ-mlv.fr/">Low-Dimensional Geometry and Topology: Discrete and Algorithmic Aspects</a>, IHP, Paris.
+    </li>
+    <li>
+        <strong>June 2018:</strong> <a href="http://irma.math.unistra.fr/article1650.html">Geometry, topology of manifolds, and physics</a>, University of Strasbourg.
+    </li>
+    <li>
+        <strong>June 2018:</strong> <a href="http://math.uni.lu/quantmod/">Quantization and Moduli Spaces</a>, University of Luxembourg.
+    </li>
+    <li>
+        <strong>January 2018:</strong> <a href="http://www.kimsobel.com/Jozef/index.html">Explorations in Geometric Analysis - Discrete and Continuous</a>, CUNY Graduate Center.
+    </li>
+    <li>
+        <strong>September 2017:</strong> <a href="https://members.loria.fr/Monique.Teillaud/collab/Astonishing/2017_workshop.html">Astonishing Workshop</a>, University of Nancy.
+    </li>
+    <li>
+        <strong>June 2017:</strong> <a href="http://www.math.univ-montp2.fr/%7Efinsler_and_metric_geometry/">Metric geometry and Finsler geometry</a>, University of Montpellier.
+    </li>
+    <li>
+        <strong>June 2017:</strong> <a href="http://www-irma.u-strasbg.fr/article1606.html">Master Class : Contemporary Perspectives in Geometry</a>, University of Strasbourg.
+    </li>
+    <li>
+        <strong>May 2017:</strong> <a href="http://math.uni.lu/schlenker/sling/">Workshop on geometric structures and representation varieties</a>, National University of Singapore.
+    </li>
+    <li>
+        <strong>April 2017:</strong> <a href="http://bmd2017.espais.iec.cat/schedule/in-and-around-the-mapping-class-group/">In and around the mapping class group</a>, Barcelona Mathematical Days.
+    </li>
+    <li>
+        <strong>March 2017:</strong> <a href="http://combi17.math.cnrs.fr/?sec=workshop3">Workshop on Enumerative Geometry</a>, IHP, Paris.
+    </li>
+    <li>
+        <strong>December 2016:</strong> <a href="http://pc1.math.gakushuin.ac.jp/~yamada/rims2016.program.pdf">Geometry of moduli spaces of low dimensional manifolds</a>, PIMS, Kyoto.
+    </li>
+    <li>
+        <strong>November 2016:</strong> <a href="http://www2.warwick.ac.uk/fac/cross_fac/iatl/activities/events/new_world">A new world ... out of nothing</a>, University of Warwick.
+    </li>
+    <li>
+        <strong>August 2016:</strong> <a href="http://www2.ims.nus.edu.sg/Programs/016wgeo/index.php">Geometry, Topology and Dynamics of Moduli Spaces</a>, IMS-NUS, Singapore.
+    </li>
+    <li>
+        <strong>June 2016:</strong> <a href="https://besson60.sciencesconf.org">Geometric Analysis in Samothrace, a tribute to Gérard Besson</a>, Samothrace.
+    </li>
+    <li>
+        <strong>May 2016:</strong> <a href="http://johnnyplatis.wixsite.com/sage">Contemporary Algebra and Geometry in Greece</a>, Anogeia, Crete.
+    </li>
+</ul>
+
+<h3>Seminars and colloquia</h3>
+<ul class="talk-list">
+<li>
+        <strong>2025:</strong> Lyon (SML Public Talk), IHP (Public Talk)
+    </li>
+
+    <li>
+        <strong>2024:</strong> Berlin, Pi-Day in Liège, Geneva, Heidelberg, Diablerets (Matrix-Imaginary conference),  EPFL
+    </li>
+    <li>
+        <strong>2023:</strong> Colloquium Bordeaux, Math Encounters (MoMath), Collège de France
+    </li>
+    <li>
+        <strong>2022:</strong> Colloquium Loria (Nancy), NUS G and T Seminar (Singapore - online), Combinatorics seminar (IHP - Paris), Colloquium Institut Elie Cartan (Nancy), Math Corps (U. Toledo - online)
+    </li>
+    <li>
+        <strong>2021:</strong> Big surf seminar (online), Bristol (online), Heidelberg (online), Geometry seminar ETHZ
+    </li>
+    <li>
+        <strong>2020:</strong> Nancy (Colloquium Loria - postponed), Paris XIII (postponed), CUNY (online), K-OS (online)
+    </li>
+    <li>
+        <strong>2019:</strong> Grenoble
+    </li>
+    <li>
+        <strong>2018:</strong> IHES, Rutgers, CUNY, Neuchâtel, Warwick, Strasbourg
+    </li>
+    <li>
+        <strong>2017:</strong> Orléans, Grenoble
+    </li>
+    <li>
+        <strong>2016:</strong> IHP, Luxembourg, St. Andrews, Stanford, Strasbourg, Rennes, Fribourg, KIAS, EPF
+    </li>
+</ul>
+
+
+<footer>
+        &copy; 2024 Hugo Parlier
+    </footer>
+
+
+
+
+</body>
+</html>

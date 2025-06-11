@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hugo Parlier</title>
+    <style>
+        /* Reset default margin and padding */
+        body, h1, h2, h3, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* General styling */
+        body {
+            font-family: 'HelveticaNeue-Light', Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            color: #333;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Container */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-top: 50px;
+        }
+
+        /* Header */
+        h1 {
+            font-size: 36px;
+            font-weight: lighter; /* Thinner font weight */
+            color: #34282C;
+            margin-bottom: 20px;
+        }
+
+        /* Menu */
+        nav {
+            background-color: #34282C;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* Content */
+        p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #666;
+        }
+
+        /* Image */
+        .profile-img {
+            display: block;
+            margin: 0 auto;
+            width: 100%; /* Adjusted to maintain original size */
+            max-width: 400px; /* Adjust the maximum width as needed */
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        /* Links in text */
+        a {
+            color: #34282C; /* Adjusted link color */
+            text-decoration: none;
+        }
+
+        /* Thinner font for section titles */
+        h2 {
+            font-weight: lighter;
+            padding-bottom: 5px;
+        }
+        h3 {
+            font-weight: lighter;
+            padding-bottom: 5px;
+            padding-top: 5px;
+        }
+        #cssmenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Add this line to make the list items display horizontally */
+}
+
+#cssmenu ul li {
+    display: inline; /* Keep the list items displayed inline */
+    margin-right: 20px;
+}
+
+/* Second Menu */
+#cssmenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #f2f2f2; /* Light grey background */
+    text-align: center; /* Center the menu items */
+    border-radius: 5px; /* Add border radius */
+}
+
+#cssmenu ul li {
+    display: inline-block;
+}
+
+#cssmenu ul li a {
+    display: block;
+    padding: 10px 10px; /* Adjust padding as needed */
+    text-decoration: none;
+    color: #000; /* Black text */
+}
+
+#cssmenu ul li:hover {
+    background-color: #ddd; /* Adjust hover background color as needed */
+}
+
+@media only screen and (max-width: 600px) {
+    #cssmenu ul li {
+        display: block;
+        margin-bottom: 10px; /* Add margin between items */
+    }
+}
+
+
+.grant {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden; /* Clear float */
+}
+.grant .title {
+    font-size: ; 
+    font-weight: italic;
+    padding: 1px; /* Make authors' names smaller */
+%    font-weight: bold; /* Make authors' names bold */
+}
+
+.grant .authors {
+margin-top: 2px;
+    font-size: small; /* Make authors' names smaller */
+%    font-weight: bold; /* Make authors' names bold */
+}
+
+.grant .venue {
+    font-size: small; /* Make journal names smaller */
+%    font-weight: bold; /* Make journal names bold */
+}
+
+.grant .details {
+    font-size: small; /* Make details names smaller */
+%    font-weight: bold; /* Make details names bold */
+}
+
+.grant dd {
+    margin-left: 0;
+    margin-top: 5px;
+}
+
+.grant dd:first-child {
+    margin-top: 10px;
+}
+
+.talk-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.talk-list li {
+    margin-bottom: 10px;
+}
+
+.talk-list li a {
+    text-decoration: none;
+    color: #333; /* Change color as needed */
+}
+
+.talk-list li a:hover {
+    color: #FF007F /* Change color as needed */
+}
+    
+.video-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.video-list li {
+    margin-bottom: 10px;
+}
+
+.video-list li a {
+    text-decoration: none;
+    color: #333; /* Change color as needed */
+}
+
+.video-list li a:hover {
+    color: #FF007F; /* Change color as needed */
+}
+
+a:hover {
+    color: #FF007F; /* Change this to the color you want on hover */
+}
+
+.organizing-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.organizing-list li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Research</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="outreach.html">Outreach</a></li>
+            <li><a href="teaching.html">Teaching</a></li>
+        </ul>
+    </nav>
+
+<div id="cssmenu">
+    <ul>
+        <li><a href="research.html"><span>Collaborators</span></a></li>
+        <li><a href="publications.html"><span>Papers</span></a></li>
+        <li><a href="talks.html"><span>Talks</span></a></li>
+        <li><a href="grants.html"><span>Grants</span></a></li>
+        <li><a href="service.html"><span>Service</span></a></li>
+    </ul>
+</div>
+
+<br>
+
+
+<h3>General service</h3>
+<ul class="organizing-list">
+    <li>
+Since 2022, I have been member of the scientific committee of the <a href="https://www.cirm-math.com/scientific-committee.html"><i>CIRM</i></a>. 
+    </li>
+<h3>Seminars, reading groups, colloquia at the University of Luxembourg:</h3>
+<ul class="organizing-list">
+    <li>
+        Together with Bruno Teheux, we organize <a href="http://math.uni.lu/multiplicities/"><i>Multiplicities</i></a>. Talks are for all mathematicians and chosen to illustrate the diversity of mathematics and mathematicians. There are several talks each semester.
+    </li>
+    <li>
+        Our group co-organizes the <a href="http://math.uni.lu/geometry/gt_seminar/index.html"><i>Geometry and Topology seminar</i></a> which generally takes place on Monday.
+    </li>
+    <li>
+        Together with Monique Teillaud and Éric Colin de Verdière, we organized a monthly <a href="https://members.loria.fr/Monique.Teillaud/collab/SoS/#seminar"><i>seminar</i></a> (with several talks) on the themes related to our "Structures on surfaces" (SoS) project.
+    </li>
+    <li>
+        Together with Jean-Marc Schlenker and Bruno Teheux, between 2018 and 2020, we organized  the <a href="http://math.uni.lu/mast/"><i>MAST lecture series</i></a> at the University of Luxembourg. This was a collection of math talks (close to a traditional colloquium) and talks about mathematical interactions with other areas.
+    </li>
+    </ul>
+
+<h3>Conference organization</h3>
+<ul class="organizing-list">
+<li>
+        <a href="https://math.uni.lu/liu/SMaRT/index.html"><i>SMaRT Workshop</i></a>, Luxembourg, March 2024.
+    </li>
+    <li>
+        <a href="https://math.uni.lu/parlier/Diablerets2023/info.html"><i>Geometry, Probability and their Synergies Workshop</i></a>, les Diablerets, March 2023.
+    </li>
+    <li>
+        <a href="https://sos.loria.fr/2022-CIRM-Workshop/"><i>SoS Final Conference</i></a>, CIRM, May 2022.
+    </li>
+    <li>
+        Paroles aux jeunes chercheurs, CIRM, November 2021.
+    </li>
+    <li>
+        Program committee member of <a href="http://eurocg21.spbu.ru"><i>Euro CG 2021</i></a>.
+    </li>
+    <li>
+        I was an external member of the scientific committee of the <a href="https://conferences.cirm-math.fr/2164.html"><i>French Computational Geometry Days</i></a> which took place at the CIRM in March 2020 (the last conference before they closed due to the pandemic).
+    </li>
+    <li>
+        Together with Binbin Xu, we organized the <a href="http://math.uni.lu/geometry/sos2020/"><i>Lost in Translation Surfaces</i></a> workshop in Luxembourg. It took place Jan. 29-31, 2020 and was organized in the framework of the <a href="https://members.loria.fr/Monique.Teillaud/collab/SoS/"><i>SoS</i></a> project supported by an ANR-FNR grant.
+    </li>
+    <li>
+        Together with Add Jaipong, Sam Kim, Chris Leininger, Jean-Marc Schlenker, Ser Peow Tan and Tengren Zhang we organized a workshop on <a href="http://www.math.science.cmu.ac.th/lst/"><i>Combinatorial and algebraic aspects of geometric structures</i></a> at Chiang Mai University in Thailand which will take place in July 2019.
+    </li>
+    <li>
+        Together with Florent Balacheff, Gil Solanes and Kroum Tzanev we organized a workshop on <a href="http://www.crm.cat/en/Activities/Curs_2018-2019/Pages/IRP-LIGAT-Workshop-Geometry.aspx"><i>Multiple Perspectives on Geometric Inequalities</i></a> at the CRM (Barcelona) in June 2019. This was preceded by a week of Advanced Courses (also at the CRM) and is part of a whole <a href="http://www.crm.cat/en/Activities/Curs_2018-2019/Pages/IRP-LIGAT.aspx"><i>semester</i></a> of activities.
+    </li>
+    <li>
+        I organized the yearly <a href=http://math.uni.lu/parlier/SOS2018/><i>SoS meeting</i></a> meeting in Luxembourg in November 2018.
+    </li>
+    <li>
+        Together with Viveka Erlandsson, Youngju Kim, Dragomir Saric, Perry Susskind, and Rob Suzzi Valli, we organized a GEAR Regional Workshop on <a href="http://math.uni.lu/parlier/AraGEAR/"><i>Geodesics on hyperbolic manifolds and related topics</i></a> at Connecticut College in August 2018.
+    </li>
+    <li>
+        Together with Jean-Marc Schlenker and Ser Peow Tan, we organized a <a href="http://math.uni.lu/schlenker/sling/"><i>Workshop on geometric structures and representation varieties</i></a> at the National University of Singapore in May 2017.
+    </li>
+    <li>
+        Together with Stefan Wenger, we organized a small <a href="http://math.uni.lu/parlier/RandomLectures/random.html"><i>lecture series</i></a> at the Math Department of Fribourg in June 2015.
+    </li>
+    <li>
+        Together with Ara Basmajian, we organized a <a href="http://math.uni.lu/parlier/Identities/PosterIdentities.pdf"><i>Workshop on Identities</i></a> at the Graduate Center (City University of New York) in April 2015.
+    </li>
+    <li>
+        In March 2014 I co-organized a Swiss Doctoral School Conference (CUSO) in the Swiss Alps:
+        <a href="http://math.uni.lu/parlier/WebpageKervaire/kervaire.html">
+        <i>Quadratic forms, lattices and applications</i></a>
+    </li>
+    <li>
+        In November 2011, at the <a href="http://www.csf.ethz.ch/">Centro Stefano Franscini</a> we held:
+        <a href="http://math.uni.lu/parlier/Buser/welcome.html">
+        <i>The hyperbolic and Riemannian geometry of surfaces and other manifolds</i></a>
+    </li>
+</ul>
+
+
+<footer>
+        &copy; 2024 Hugo Parlier
+    </footer>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hugo Parlier</title>
+    <style>
+        /* Reset default margin and padding */
+        body, h1, h2, h3, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* General styling */
+        body {
+            font-family: 'HelveticaNeue-Light', Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            color: #333;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Container */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-top: 50px;
+        }
+
+        /* Header */
+        h1 {
+            font-size: 36px;
+            font-weight: lighter; /* Thinner font weight */
+            color: #34282C;
+            margin-bottom: 20px;
+        }
+
+        /* Menu */
+        nav {
+            background-color: #34282C;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* Content */
+        p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #666;
+        }
+
+        /* Image */
+        .profile-img {
+            display: block;
+            margin: 0 auto;
+            width: 100%; /* Adjusted to maintain original size */
+            max-width: 400px; /* Adjust the maximum width as needed */
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        /* Links in text */
+a {
+    text-decoration: none;
+    color: #34282C; /* Adjusted link color */
+}
+
+/* Change link color on hover */
+a:hover {
+    color: #FF007F; /* Change this to the color you want on hover */
+}
+
+        /* Thinner font for section titles */
+        h2 {
+            font-weight: lighter;
+            padding-bottom: 5px;
+        }
+        h3 {
+            font-weight: lighter;
+            padding-bottom: 5px;
+        }
+        #cssmenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Add this line to make the list items display horizontally */
+}
+
+#cssmenu ul li {
+    display: inline; /* Keep the list items displayed inline */
+    margin-right: 20px;
+}
+
+/* Second Menu */
+#cssmenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #f2f2f2; /* Light grey background */
+    text-align: center; /* Center the menu items */
+    border-radius: 5px; /* Add border radius */
+}
+
+#cssmenu ul li {
+    display: inline-block;
+}
+
+#cssmenu ul li a {
+    display: block;
+    padding: 10px 10px; /* Adjust padding as needed */
+    text-decoration: none;
+    color: #000; /* Black text */
+}
+
+#cssmenu ul li:hover {
+    background-color: #ddd; /* Adjust hover background color as needed */
+}
+
+@media only screen and (max-width: 600px) {
+    #cssmenu ul li {
+        display: block;
+        margin-bottom: 10px; /* Add margin between items */
+    }
+}
+
+.grant {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden; /* Clear float */
+}
+.grant .title {
+    font-size: ; 
+    font-weight: italic;
+    padding: 1px; /* Make authors' names smaller */
+%    font-weight: bold; /* Make authors' names bold */
+}
+
+.grant .authors {
+margin-top: 2px;
+    font-size: small; /* Make authors' names smaller */
+%    font-weight: bold; /* Make authors' names bold */
+}
+
+.grant .venue {
+    font-size: small; /* Make journal names smaller */
+%    font-weight: bold; /* Make journal names bold */
+}
+
+.grant .details {
+    font-size: small; /* Make details names smaller */
+%    font-weight: bold; /* Make details names bold */
+}
+
+.grant dd {
+    margin-left: 0;
+    margin-top: 5px;
+}
+
+.grant dd:first-child {
+    margin-top: 10px;
+}
+
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Research</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="outreach.html">Outreach</a></li>
+            <li><a href="teaching.html">Teaching</a></li>
+        </ul>
+    </nav>
+
+<div id="cssmenu">
+    <ul>
+        <li><a href="research.html"><span>Collaborators</span></a></li>
+        <li><a href="publications.html"><span>Papers</span></a></li>
+        <li><a href="talks.html"><span>Talks</span></a></li>
+        <li><a href="grants.html"><span>Grants</span></a></li>
+        <li><a href="service.html"><span>Service</span></a></li>
+    </ul>
+</div>
+
+<br>
+  <p>My group is currently supported by several grants.</p>
+
+    <p>
+    <div class="grant">
+        <dt><a href="https://www.uni.lu/fstm-en/news/msca-awarded-grants-in-geometry/">Alexey Balitskiy</a> is supported by a <a href="https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships">Marie Skłodowska-Curie postdoctoral fellowship (2023-2025)</a>.
+        </dt>
+        <dd>Systolic and diastolic estimates in geometry</dd>
+    </div>
+    <div class="grant">
+        <dt><a href="https://www.uni.lu/fstm-en/news/msca-awarded-grants-in-geometry/">Katie Vokes</a> is supported by a <a href="https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships">Marie Skłodowska-Curie postdoctoral fellowship (2023-2025)</a>.
+        </dt>
+        <dd>Combinatorial and Geometric Methods for Mapping Class Groups of Surfaces</dd>
+    </div>
+</p>
+
+    <p>We benefit greatly from the support of the <a href="https://www.fnr.lu">Luxembourg National Research Fund</a>:</p>
+    
+    <div class="grant">
+        <dt><a href="https://www.fnr.lu/funding-instruments/open/">FNR OPEN Grant (2022-2025)</a></dt>
+        <dd>HypSTER (Hyperbolic Surfaces and Their Euclidean Renderings): PI</dd>
+    </div>
+
+<div class="grant">
+        <dt><a href="https://www.fnr.lu/news/international-cooperation-launch-afr-bilateral-call-singapore/">FNR AFR Bilateral Grant with Singapore (2023-2025)</a></dt>
+        <dd>Resurface: co-PI with Jean-Marc Schlenker</dd>
+    </div>
+
+    <div class="grant">
+        <dt><a href="https://www.fnr.lu/funding-instruments/open/">FNR OPEN Grant (2020-2024)</a></dt>
+        <dd>SOUND (Surfaces, orthogeodesics and their underlying moduli spaces): PI</dd>
+    </div>
+
+    <div class="grant">
+        <dt><a href="https://www.fnr.lu/funding-instruments/inter/">ANR-FNR INTER Grant (2019-2023)</a></dt>
+        <dd><a href="https://members.loria.fr/MTeillaud/collab/SoS/">SOS: Structures On Surfaces</a>: co-PI and national coordinator for Luxembourg</dd>
+    </div>
+
+ <div class="grant">
+        <dt><a href="https://www.fnr.lu/funding-instruments/pride/">PRIDE PhD Grant (2019-2023)</a></dt>
+        <dd>GPS: co-PI and main coordinator</dd>
+    </div>
+
+    <div class="grant">
+        <dt><a href="https://www.fnr.lu/news/international-cooperation-launch-afr-bilateral-call-singapore/">FNR AFR Bilateral Grant with Singapore (2018-2020)</a></dt>
+        <dd>COALAS: co-PI with Jean-Marc Schlenker</dd>
+    </div>
+
+    <div class="grant">
+        <dt><a href="https://www.fnr.lu/funding-instruments/pride/">PRIDE PhD Grant (2017-2021)</a></dt>
+        <dd>GSM: co-PI</dd>
+    </div>
+
+    <div class="grant">
+        <dt><a href="https://www.fnr.lu/funding-instruments/psp/">FNR PSP Classic for Scientific Outreach (2018-2020)</a></dt>
+        <dd>Unpuzzling mathematics: PI</dd>
+    </div>
+
+<p>In addition, the FNR has been very supportive of multiple outreach events we've been involved with, including our presence at the Universal Expo and science festivals.<p>
+
+    <p>I am also very grateful to the <a href="http://www.snf.ch">Swiss National Science Foundation</a> for their support in the past. In particular, I have benefitted from the following grants:</p>
+
+    <div class="grant">
+        <dt><a href="http://www.snf.ch/en/funding/careers/snsf-professorships/Pages/default.aspx">SNF Professorship Grants</a></dt>
+        <dd>Grants numbers PP00P2_128557 (2010-2014) and PP00P2_153024 (2014-2017)</dd>
+    </div>
+
+    <div class="grant">
+        <dt><a href="http://www.snf.ch/en/funding/science-communication/agora/Pages/default.aspx">AGORA Grant for Scientific Outreach</a></dt>
+        <dd>Grant number CRAGI2_145616 (2013-2015)</dd>
+    </div>
+
+    <div class="grant">
+        <dt><a href="http://www.snf.ch/en/funding/careers/early-postdoc-mobility/Pages/default.aspx">Early Postdoc Grant</a></dt>
+        <dd>Grant number PBEL2_106180 (2004-2005)</dd>
+    </div>
+
+    <p>The SNSF also funds the <a href="http://www.csf.ethz.ch/">Centro Stefano Franscini</a>, which provided me with a generous conference grant.</p>
+
+    <p>I am a member of the <a href="http://gear.math.illinois.edu">GEAR network</a> funded by the <a href="http://www.nsf.gov">National Science Foundation</a>. As a member of the GEAR network, this makes my home institution a network node and gives access to multiple funding opportunities.</p>
+
+    <p>I've also been an external member of different research groups funded by the Spanish Ministry of Science and Education:</p>
+
+    <div class="grant">
+        <dt>Grants numbers 2006-14688 (2007-2010) and 2011-23092 (2012-2015)</dt>
+    </div>
+
+
+
+<footer>
+        &copy; 2024 Hugo Parlier
+    </footer>
+
+
+
+
+</body>
+</html>

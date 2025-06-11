@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hugo Parlier</title>
+    <style>
+        /* Reset default margin and padding */
+        body, h1, h2, h3, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* General styling */
+        body {
+            font-family: 'HelveticaNeue-Light', Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            color: #333;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Container */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-top: 50px;
+        }
+
+        /* Header */
+        h1 {
+            font-size: 36px;
+            font-weight: lighter; /* Thinner font weight */
+            color: #34282C;
+            margin-bottom: 20px;
+        }
+
+        /* Menu */
+        nav {
+            background-color: #34282C;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* Content */
+        p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #666;
+        }
+
+        /* Image */
+        .profile-img {
+            display: block;
+            margin: 0 auto;
+            width: 100%; /* Adjusted to maintain original size */
+            max-width: 400px; /* Adjust the maximum width as needed */
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        /* Links in text */
+a {
+    text-decoration: none;
+    color: #34282C; /* Adjusted link color */
+}
+
+/* Change link color on hover */
+a:hover {
+    color: #FF007F; /* Change this to the color you want on hover */
+}
+        /* Thinner font for section titles */
+        h2 {
+            font-weight: lighter;
+            padding-bottom: 5px;
+        }
+        h3 {
+            font-weight: lighter;
+            padding-bottom: 5px;
+        }
+        #cssmenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Add this line to make the list items display horizontally */
+}
+
+#cssmenu ul li {
+    display: inline; /* Keep the list items displayed inline */
+    margin-right: 20px;
+}
+
+/* Second Menu */
+#cssmenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #f2f2f2; /* Light grey background */
+    text-align: center; /* Center the menu items */
+    border-radius: 5px; /* Add border radius */
+}
+
+#cssmenu ul li {
+    display: inline-block;
+}
+
+#cssmenu ul li a {
+    display: block;
+    padding: 10px 10px; /* Adjust padding as needed */
+    text-decoration: none;
+    color: #000; /* Black text */
+}
+
+#cssmenu ul li:hover {
+    background-color: #ddd; /* Adjust hover background color as needed */
+}
+
+@media only screen and (max-width: 600px) {
+    #cssmenu ul li {
+        display: block;
+        margin-bottom: 10px; /* Add margin between items */
+    }
+}
+
+
+.publication {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden; /* Clear float */
+}
+
+.publication .title {
+    font-size: ; 
+    font-weight: italic;
+    padding: 1px; /* Make authors' names smaller */
+%    font-weight: bold; /* Make authors' names bold */
+}
+
+.publication .authors {
+margin-top: 2px;
+    font-size: small; /* Make authors' names smaller */
+%    font-weight: bold; /* Make authors' names bold */
+}
+
+.publication .venue {
+    font-size: small; /* Make journal names smaller */
+%    font-weight: bold; /* Make journal names bold */
+}
+
+.publication .details {
+    font-size: small; /* Make details names smaller */
+%    font-weight: bold; /* Make details names bold */
+}
+
+
+
+.counter {
+    counter-reset: publication-counter 0; /* Reset counter */
+    
+}
+
+.publication {
+    counter-increment: publication-counter; /* Increment counter */
+}
+
+.publication::before {
+    content: "[" counter(publication-counter) "]"; /* Counter between brackets */
+    font-weight: light;
+    font-size: small;
+    margin-right: 5px;
+    float: left; /* Float counter to the left */
+}
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Research</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="outreach.html">Outreach</a></li>
+            <li><a href="teaching.html">Teaching</a></li>
+        </ul>
+    </nav>
+
+<div id="cssmenu">
+    <ul>
+        <li><a href="research.html"><span>Collaborators</span></a></li>
+        <li><a href="publications.html"><span>Papers</span></a></li>
+        <li><a href="talks.html"><span>Talks</span></a></li>
+        <li><a href="grants.html"><span>Grants</span></a></li>
+        <li><a href="service.html"><span>Service</span></a></li>
+    </ul>
+</div>
+
+<br>
+
+<H3>
+Fresh preprints
+</h3>            
+
+<div class="publication">
+                <div><A HREF=https://arxiv.org/abs/2403.15261>Crossing lemmas for k-systems of arcs</A></div>
+                <div class="authors">
+With A. Hubard</div>
+</div>
+
+<div class="publication">
+                <div><A HREF=Papers/ClosedCurves2023-08-26.pdf>A topological viewpoint on curves via intersection</A></div>
+                <div class="authors">
+With B. Xu</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/Gettinglost.pdf">Counting geodesics between surface triangulations</a></div>
+    <div class="authors">With L. Pournin</div>
+</div>
+
+<div class="publication">
+    <div><A HREF=https://arxiv.org/abs/2212.01934>Computing a Dirichlet domain for a hyperbolic surface</A></div>
+    <div class="authors">With V. Despr&eacute;, B. Kolbe and M. Teillaud</div>
+</div>
+
+
+
+<div class="publication">
+    <div><A HREF=Papers/ConcaveCores2020-06-08.pdf>Prime orthogeodesics, concave cores and families of identities on hyperbolic surfaces</A></div>
+    <div class="authors">With A. Basmajian and S. P. Tan</div>
+</div>
+
+<div class="publication">
+    <div><A HREF=Papers/FindingMyIdentity2020-05-05.pdf>Geodesic and orthogeodesic identities on hyperbolic surfaces</A></div>
+    <div class="authors"></div>
+</div>
+
+<div class="publication">
+    <div><A HREF=Papers/Gaps2018-06-13.pdf>Quantifying the sparseness of simple geodesics on hyperbolic surfaces</A></div>
+    <div class="authors">With P. Buser</div>
+</div>
+
+
+
+<H3>
+Journal publications
+</H3>
+<div class="publication">
+    <div><A HREF=Papers/hexagon2022-04-01.pdf>The coarse geometry of hexagon decomposition graphs</A></div>
+    <div class="authors">With F. G&uuml;ltepe</div>
+    <div><span class="venue">Canad. J. Math..</span>, <span class="details">to appear.</span></div>
+</div>
+
+ <div class="publication">
+                <div><a class="title" HREF=Papers/note-PS-2022-07-31.pdf>Quasisymmetric maps, shears, lambda lengths and flips</a></div>
+                <div class="authors">With D. &#352;ari&cacute;</div>
+                <div><span class="venue">Math. Z., 306(3), 2024, Paper No. 21, 14 pp.</span>,</div>
+            </div>
+
+<div class="publication">
+    <div><a href="Papers/Shorter2023-04-14.pdf">A shorter note on shorter pants</a></div>
+    <div class="venue">Bull. Lond. Math. Soc., 56(4), 2024, 1483--1487.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/IdealPants2022-10-24.pdf">The shortest non-simple closed geodesics on hyperbolic surfaces</a></div>
+    <div class="authors">With A. Basmajian and H. Vo</div>
+    <div class="venue">Math. Z., 306(1), 2024, Paper No. 8, 19 pp.<span class="details"> </span></div>
+</div>
+
+<div class="publication">
+    <div><a href="https://arxiv.org/abs/2302.06336">Universal families of arcs and curves on surfaces</a></div>
+    <div class="authors">With N. Fuladi and A. de Mesmay</div>
+    <div class="venue">Israel Journal of Math., <span class="details">to appear.</span></div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/BigPants2021-06-24.pdf">Bounded geometry with no bounded pants decomposition</a></div>
+    <div class="authors">With A. Basmajian and N. Vlamis</div>
+    <div class="venue">Israel Journal of Math.  260(1), 2024, 235--260.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/Luo-Tan-Pants2020-02-07.pdf">Measuring pants</a></div>
+    <div class="authors">With N. M. Doan and S. P. Tan</div>
+    <div class="venue">Trans. Amer. Math. Soc., 376 (8), 2023, 5281--5306.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/Systole-vs-Diametre2020-11-06.pdf">Systoles and diameters of hyperbolic surfaces</a></div>
+    <div class="authors">With F. Balacheff and V. Despr&eacute;</div>
+    <div class="venue">Kyoto J. Math., 63(1), 2023, 211--222.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/SmallDelaunayTriangulations2020-11-19.pdf">Minimal Delaunay triangulations of hyperbolic surfaces</a></div>
+    <div class="authors">With M. Ebbens and G. Vegter</div>
+    <div class="venue">Discrete Comput. Geom., 69(2), 2023, 568--592.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/triangles2021-02-19.pdf">Ideally, all surfaces of infinite type admit a triangulation</a></div>
+    <div class="authors">With Alan McLeay</div>
+    <div class="venue">Bull. Lond. Math. Soc., 54(5), 2022, 2032--2040.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/ExpectedSepSys2020-12-07.pdf">The simple separating systole for hyperbolic surfaces of large genus</a></div>
+    <div class="authors">With Y. Wu and Y. Xue</div>
+    <div class="venue">J. Inst. Math. Jussieu, 21(6), 2022, 2205--2214.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/FlipItAll2020-11-04.pdf">Flip graphs for infinite type surfaces</a></div>
+    <div class="authors">With A. Fossas</div>
+    <div class="venue">Groups Geom. Dyn., 16(4), 2022, 1165--1178.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/LengthProductFinal.pdf">The minimal length product over homology bases of manifolds</a></div>
+    <div class="authors">With F. Balacheff and S. Karam</div>
+    <div class="venue">Math. Ann., 380(1-2), 2021, 825--854.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/Ksystoles2016-09-01.pdf">Short closed geodesics with self-intersections</a></div>
+    <div class="authors">With V. Erlandsson</div>
+    <div class="venue">Math. Proc. Camb. Philos. Soc., 169(3), 2020, 623--638.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/ArcArcArc2019-02-28.pdf">Geometric simplicial embeddings of arc-type graphs</a></div>
+    <div class="authors">With A. Weber</div>
+    <div class="venue">J. Korean Math. Soc., 57(5), 2020, 1103--1118.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/counting-stable-length-hyperbolic2016-12-16.pdf">Counting curves and the stable length of currents</a></div>
+    <div class="authors">With V. Erlandsson and J. Souto</div>
+    <div class="venue">J. Eur. Math. Soc. (JEMS), 22(6), 2020, 1675-1702.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/main.pdf">The maximum number of systoles for genus two Riemann surfaces with abelian differentials</a></div>
+    <div class="authors">With C. Judge</div>
+    <div class="venue">Comment. Math. Helv., 94(2), 2019, 399-437.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/FlipGeometry2014-11-21.pdf">The geometry of flip graphs and mapping class groups</a></div>
+    <div class="authors">With V. Disarlo</div>
+    <div class="venue">Trans. Amer. Math. Soc., 372(6), 2019, 3809-3844.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/Simultaneous2015-09-14.pdf">Simultaneous flips on triangulated surfaces</a></div>
+    <div class="authors">With V. Disarlo</div>
+    <div class="venue">Michigan Math. J., 67(3), 2018, 451-464.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/Isospectral2016-11-07.pdf">Interrogating surface length spectra and quantifying isospectrality</a></div>
+    <div class="venue">Math. Ann., 370(3-4), 2018, 1759-1787.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/GCPFG2014-10-29.pdf">The genus of curve, pants and flip graphs</a></div>
+    <div class="authors">With B. Petri</div>
+    <div class="venue">Discrete Comput. Geom., 59(1), 2018, 1-30.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/OneHoledSurfaces2015-10-26.pdf">Modular flip-graphs of one holed surfaces</a></div>
+    <div class="authors">With L. Pournin</div>
+    <div class="venue">European J. Combin., 67, 2018, 158-173.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/OncePuncturedDisk2016-02-15.pdf">Once punctured disks, non-convex polygons, and pointihedra</a></div>
+    <div class="authors">With L. Pournin</div>
+    <div class="venue">Ann. Comb., 22(3), 2018, 619-640.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/Filling2016-10-26.pdf">Geometric filling curves on surfaces</a></div>
+    <div class="authors">With A. Basmajian and J. Souto</div>
+    <div class="venue">Bull. Lond. Math. Soc., 49(4), 2017, 660-669.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/FlippinDiam2014-07-06.pdf">Flip-graph moduli spaces of filling surfaces</a></div>
+    <div class="authors">With L. Pournin</div>
+    <div class="venue">J. Eur. Math. Soc. (JEMS), 19(9), 2017, 2697-2737.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/domino2016-08-25.pdf">Distances in domino flip graphs</a></div>
+    <div class="authors">With S. Zappa</div>
+    <div class="venue">Amer. Math. Monthly, 124(8), 2017, 710-722.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/infinitetype2015-11-10.pdf">Arc and curve graphs for infinite-type surfaces</a></div>
+    <div class="authors">With J. Aramayona and A. Fossas</div>
+    <div class="venue">Proc. Amer. Math. Soc., 145(11), 2017, 4995-5006.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/asymp_2014-06-20.pdf">On the homology length spectrum of surfaces</a></div>
+    <div class="authors">With D. Massart</div>
+    <div class="venue">Int. Math. Res. Not. IMRN, 8, 2017, 2367-2401.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/fillingpunctures2015-08-14.pdf">Filling sets of curves on punctured surfaces</a></div>
+    <div class="authors">With F. Fanoni</div>
+    <div class="venue">New York J. Math., 22, 2016, 653-666.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/Chromatic2014-11-13.pdf">Chromatic numbers of hyperbolic surfaces</a></div>
+    <div class="authors">With C. Petit</div>
+    <div class="venue">Indiana Univ. Math. J., 65(4), 2016, 1401-1423.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/Thick2013-06-26.pdf">Relative shapes of thick subsets of moduli space</a></div>
+    <div class="authors">With J. Anderson and A. Pettet</div>
+    <div class="venue">Amer. J. Math, 138(2), 2016, 473-498.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/flipflop0923.pdf">Injective maps between flip graphs</a></div>
+    <div class="authors">With J. Aramayona and T. Koberda</div>
+    <div class="venue">Ann. Inst. Fourier (Grenoble), 65(5), 2015, 2037-2055.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/kissingnumbers2014-08-25.pdf">Systoles and kissing numbers of finite area hyperbolic surfaces</a></div>
+    <div class="authors">With F. Fanoni</div>
+    <div class="venue">Algebr. Geom. Topol., 15(6), 2015, 3409-3433.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/Infinity2014-10-14.pdf">Curve graphs on surfaces of infinite type</a></div>
+    <div class="authors">With A. Fossas</div>
+    <div class="venue">Ann. Acad. Sci. Fenn. Math., 40 (2), 2015, 793-801.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/Connect2013-05-21.pdf">Connecting p-gonal loci in the compactification of moduli space</a></div>
+    <div class="authors">With A. F. Costa and M. Izquierdo</div>
+    <div class="venue">Rev. Mat. Complut., 28(2), 2015, 469-486.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/BabyBers2013-05-21.pdf">A short note on short pants</a></div>
+    <div class="venue">Canad. Math. Bull., 57(4), 2014, 870-876.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/BMP2012-09-28.pdf">Systole growth for finite area hyperbolic surfaces</a></div>
+    <div class="authors">With F. Balacheff and E. Makover</div>
+    <div class="venue">Ann. Fac. Sci. Toulouse, Math., 23(6), 2014, 175-180.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/max2012-09-27.pdf">Kissing numbers for surfaces</a></div>
+    <div class="venue">J. Topology, 6(3), 2013, 777-791.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/convex041111.pdf">Convexity of strata in diagonal pants graphs of surfaces</a></div>
+    <div class="authors">With J. Aramayona, C. Lecuire and K. Shackleton</div>
+    <div class="venue">Publ. Mat., 57, 2013, 219-237.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/MPS.2010.1005.pdf">Constructing metrics on a 2-torus with a partially prescribed stable norm</a></div>
+    <div class="authors">With E. Makover and C. Sutton</div>
+    <div class="venue">Manuscripta Math., 139, 2012, 515-534.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/bers2012-04-07.pdf">Bers' constants for punctured spheres and hyperelliptic surfaces</a></div>
+    <div class="authors">With Florent Balacheff</div>
+    <div class="venue">J. Topol. Anal., 4(3), 2012, 271-296.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/BPS-Final.pdf">Short loop decompositions of surfaces and the geometry of Jacobians</a></div>
+    <div class="authors">With F. Balacheff and S. Sabourau</div>
+    <div class="venue">Geom. Funct. Anal., 22(1), 2012, 37-73.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/DiamMod2011-07-02.pdf">Growth of the Weil-Petersson diameter of moduli space</a></div>
+    <div class="authors">With Will Cavendish</div>
+    <div class="venue">Duke Math. J., 161(1), 2012, 139-171.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/Hom.2011.04.06.pdf">The homology systole of hyperbolic Riemann surfaces</a></div>
+    <div class="venue">Geom. Dedicata, 157(1), 2012, 331-338.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/GPY.2010.10.27.pdf">Pants decompositions of random surfaces</a></div>
+    <div class="authors">With L. Guth and R. Young</div>
+    <div class="venue">Geom. Funct. Anal., 21(5), 2011, 1069-1090.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/APP_KMinimalSet_081010Arxiv.pdf">Small filling sets of curves on a surface</a></div>
+    <div class="authors">With J. Anderson and A. Pettet</div>
+    <div class="venue">Topology Appl., 158, 2011, 84-92.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/flatpants.pdf">Constructing convex planes in the pants complex</a></div>
+    <div class="authors">With J. Aramayona and K. Shackleton</div>
+    <div class="venue">Proc. Amer. Math. Soc., 137, 2009, 3523-3531.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/costaparlierv2.pdf">Applications of a theorem of Singerman about Fuchsian groups</a></div>
+    <div class="authors">With Antonio F. Costa</div>
+    <div class="venue">Arch. Math. (Basel), 91(6), 2008, 536-543.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/articleHarnackv3.pdf">On Harnack's Theorem and extensions: a geometric proof and applications</a></div>
+    <div class="authors">With Antonio F. Costa</div>
+    <div class="venue">Conform. Geom. Dyn., 12, 2008, 174-186.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/articleIJMnew.pdf">Fixed point free involutions on Riemann surfaces</a></div>
+    <div class="venue">Israel Journal of Math., 166, 2008, 297-311.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/completemarkGT.pdf">Multiplicities of simple closed geodesics and hypersurfaces in Teichm&uuml;ller space</a></div>
+    <div class="authors">With Greg McShane</div>
+    <div class="venue">Geom. Topol., 12, 2008, 1883-1919.</div>
+</div>
+
+<div class="publication">
+    <div><a href="http://www.arxiv.org/abs/math.GM/0603156">On the angles formed by N points of the Euclidean and hyperbolic planes</a></div>
+    <div class="authors">With Ghislain Jaudon</div>
+    <div class="venue">Geombinatorics, 17(4), 2008, 157-165.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/fareypants.pdf">Totally geodesic subgraphs of the pants complex</a></div>
+    <div class="authors">With J. Aramayona and K. Shackleton</div>
+    <div class="venue">Math. Res. Lett., 15(2), 2008, 309-320.</div>
+</div>
+
+<div class="publication">
+    <div><a href="http://www.arxiv.org/abs/math.DG/0506477">A geometric characterization of orientation reversing involutions</a></div>
+    <div class="authors">With Antonio F. Costa</div>
+    <div class="venue">J. London Math. Soc. (2), 77(2), 2008, 287-298.</div>
+</div>
+
+<div class="publication">
+    <div><a href="http://www.arxiv.org/abs/math.DG/0405129">Collars and partitions of hyperbolic cone-surfaces</a></div>
+    <div class="authors">With Emily Dryden</div>
+    <div class="venue">Geom. Dedicata, 127(1), 2007, 139-149.</div>
+</div>
+
+<div class="publication">
+    <div><a href="http://www.arxiv.org/abs/math.DG/0608049">Minimal length of two intersecting simple closed geodesics</a></div>
+    <div class="authors">With Thomas Gauglhofer</div>
+    <div class="venue">Manuscripta Math., 122(3), 2007, 321-339.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/articleEnseignement.pdf">Hyperbolic polygons and simple closed geodesics</a></div>
+    <div class="venue">Enseign. Math. (2), 52, 2006, 295-317.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/parlier.pdf">Lengths of geodesics on Riemann surfaces with boundary</a></div>
+    <div class="venue">Ann. Acad. Sci. Fenn. Math., 30(2), 2005, 227-236.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/articlecollar.pdf">A note on collars of simple closed geodesics</a></div>
+    <div class="venue">Geom. Dedicata, 112(1), 2005, 165-168.</div>
+</div>
+
+<H3>
+Refereed proceedings
+</H3>
+
+<div class="publication">
+    <div><a href="https://archive.bridgesmathart.org/2022/bridges2022-49.pdf">Quadratis Puzzles</a></div>
+    <div class="authors">With M. Gutiérrez and P. Turner</div>
+    <div class="venue">Proceedings of Bridges 2022: Mathematics, Art, Music, Architecture, Culture, 2022, 49-56.</div>
+</div>
+
+<div class="publication">
+    <div>Minimal Delaunay triangulations of hyperbolic surfaces (conference proceedings version of [52] above).</div>
+    <div class="authors">With M. Ebbens and G. Vegter</div>
+    <div class="venue">37th International Symposium on Computational Geometry (SoCG), Art. No. 31, 16 pp., LIPIcs. Leibniz Int. Proc. Inform., 189, Schloss Dagstuhl. Leibniz-Zent. Inform., Wadern, 2021.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/BuserParlierOsaka.pdf">The distribution of simple closed geodesics on surfaces</a></div>
+    <div class="authors">With Peter Buser</div>
+    <div class="venue">Proc. of the 15th ICFIDCAA (Osaka 2007), 2008, 3-10.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/detcirc2.pdf">Determinants of Binary Circulant Matrices</a></div>
+    <div class="authors">With Gerard Maze</div>
+    <div class="venue">Proc. 2004 IEEE Int. Sym. on Information Theory, 2004.</div>
+</div>
+
+<H3>
+Book chapters
+</H3>
+<div class="publication">
+    <div><a href="Papers/BoundingLengths2021-09-09.pdf">The topological types of length bounded multicurves</a></div>
+    <div class="venue">Essays in Geometry, dedicated to Norbert A'Campo, 97-109, IRMA Lect. Math. Theor. Phys., 34, EMS Press, Berlin, 2023.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/handbookSCGarxiv.pdf">Simple closed geodesics and the study of Teichm&uuml;ller spaces</a></div>
+    <div class="venue">Handbook of Teichm&uuml;ller theory, vol. IV, IRMA Lect. Math. Theor. Phys., 2014, 113-134.</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/shortmark.pdf">Simple closed geodesics of equal length on a torus</a></div>
+    <div class="authors">With G. McShane</div>
+    <div class="venue">Geometry of Riemann surfaces, LMS Lecture Notes 368, 2010, 268-282.</div>
+</div>
+
+<H3>
+Appendices/other
+</H3>
+
+<div class="publication">
+    <div><a href="https://arxiv.org/pdf/1801.10564.pdf">An appendix to: Least dilatation of pure surface braids (by M. Loving)</a></div>
+    <div class="authors">With M. Loving</div>
+    <div class="venue">Algebr. Geom. Topol., 19(2),  2019, 941-964.</div>
+</div>
+
+<div class="publication">
+    <div>Illustrations for: Mirzakhani's Curve Counting and Geodesic Currents (by V. Erlandsson and J. Souto).</div>
+    <div class="venue">Birkhauser, 2023.</div>
+</div>
+
+
+<H3>
+Older preprints:
+</h3>
+
+<div class="publication">
+    <div><a href="Papers/circleDelaunay2018-04-09.pdf">Delaunay triangulations of points on circles</a></div>
+    <div class="authors">With V. Despré, O. Devillers and J.-M. Schlenker</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/ChromaticII2017-01-30.pdf">Chromatic numbers for the hyperbolic plane and discrete analogs</a></div>
+    <div class="authors">With C. Petit</div>
+</div>
+
+<div class="publication">
+    <div><a href="Papers/articleHomology.pdf">Separating simple closed geodesics and homology bases</a></div>
+</div>
+
+
+<footer>
+        &copy; 2024 Hugo Parlier
+    </footer>
+
+<script type="text/javascript">
+var sc_project=11237441; 
+var sc_invisible=1; 
+var sc_security="8ca26806"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="web stats"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="//c.statcounter.com/11237441/0/8ca26806/1/" alt="web
+stats"></a></div></noscript>
+
+</BODY>
+</html>
+
+
+</body>
+</html>
